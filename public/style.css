@@ -17,12 +17,13 @@ img { max-width: 100%; display: block; }
 
 /* ชุดสีของเรา — เปลี่ยนได้ตามต้องการ */
 :root {
-  --primary: #FB9E09;   /* ส้มสด */
-  --accent:  #D13704;   /* แดงส้ม */
-  --light:   #F0C88E;   /* ครีม */
-  --dark:    #65463E;   /* น้ำตาลเข้ม */
-  --bg:      #FAF3E7;   /* พื้นหลังเบา ๆ */
+  --primary: #C59B27;   /* สีทองอำพัน/ทองคำ - สื่อถึงคุณค่าและภูมิปัญญาไทย */
+  --accent:  #A62B2B;   /* สีแดงชาด/แดงครั่ง - สีมงคล ช่วยกระตุ้นความน่าสนใจและการซื้อ */
+  --light:   #EADBC8;   /* สีครีมกระดาษสา/ผ้าฝ้าย - ดูนุ่มนวล เป็นธรรมชาติ */
+  --dark:    #4A3429;   /* สีน้ำตาลเปลือกไม้/ไม้สักเข้ม - ดูมั่นคง พื้นบ้าน อบอุ่น */
+  --bg:      #FDFBF7;   /* สีพื้นหลังนวลตาสไตล์ไทย (Warm White) */
 }
+
 
 .navbar {
   display: flex;
@@ -211,10 +212,11 @@ img { max-width: 100%; display: block; }
   margin-bottom: 0.8rem;
 }
 
+/* --- ส่วนของป้ายประเภทสินค้า (Category Badge) --- */
 .category-badge {
   padding: 0.3rem 0.6rem;
-  background: #F0C88E;
-  color: #65463E;
+  background: var(--light); /* ใช้ตัวแปรครีมผ้าฝ้าย */
+  color: var(--dark);      /* ใช้ตัวแปรน้ำตาลเข้ม */
   border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 700;
@@ -236,7 +238,7 @@ img { max-width: 100%; display: block; }
 
 .delete-btn {
   padding: 0.5rem 1rem;
-  background: #D13704;
+  background: #A62B2B; /* ใช้สีแดงชาด */
   color: white;
   border: none;
   border-radius: 6px;
@@ -247,7 +249,7 @@ img { max-width: 100%; display: block; }
 }
 
 .delete-btn:hover {
-  background: #A82C03;
+  background: #7A1E1E; /* สีแดงเข้มขึ้นเวลา Hover */
 }
 
 .add-form-section {
@@ -283,10 +285,11 @@ img { max-width: 100%; display: block; }
   font-size: 0.95rem;
 }
 
+/* --- ส่วนของฟอร์ม (Form Inputs) --- */
 .form-group input,
 .form-group select {
   padding: 0.75rem;
-  border: 2px solid #F0C88E;
+  border: 2px solid var(--light); /* เปลี่ยนขอบเป็นสีครีมกระดาษสา */
   border-radius: 6px;
   font-family: inherit;
   font-size: 1rem;
@@ -296,12 +299,13 @@ img { max-width: 100%; display: block; }
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #FB9E09;
+  border-color: var(--primary); /* เปลี่ยนเป็นสีทองเวลาโฟกัส */
 }
 
+/* --- ส่วนของปุ่มกดส่งฟอร์ม (Submit Button) --- */
 .submit-btn {
   padding: 0.9rem;
-  background: #FB9E09;
+  background: var(--primary); /* สีทอง */
   color: white;
   border: none;
   border-radius: 6px;
@@ -313,7 +317,7 @@ img { max-width: 100%; display: block; }
 }
 
 .submit-btn:hover {
-  background: #D13704;
+  background: var(--accent); /* เลื่อนเมาส์โดนแล้วเปลี่ยนเป็นสีแดงชาด */
 }
 
 @media (max-width: 600px) {
